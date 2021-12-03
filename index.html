@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.min.css">
+    <title>Page title</title>
+  </head>
+  <body>
+    <main class="main">
+      <section class="greeting">
+        <img class="greeting__logo" src="img/logo.svg" alt="logo">
+
+        <h1 class="greeting__title">
+          Find the <span class="greeting__title greeting__title--brand-color">best place</span><br>
+          <span class="greeting__title greeting__title--brand-color">to rest</span> while traveling
+        </h1>
+
+        <div class="greeting__btn">
+          <a class="btn btn--negative" href="#Registration">Registration</a>
+        </div>
+      </section>
+
+      <section class="registration" id="Registration">
+        <div class="registration__wrapper">
+          <div class="container-xxl">
+            <div class="row justify-content-center">
+              <div class="col">
+                <h2 class="registration__title">
+                  <span class="registration__title registration__title--brand-color">Sign Up</span> and find the best place to rest while traveling
+                </h2>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-8 col-xl-6">
+                <form class="registration__form" action="/">
+                  <div class="registration__form-item field" data-scroll>
+                    <input
+                      class="field__input"
+                      type="text"
+                      name="first-name"
+                      id="first-name"
+                      placeholder=" "
+                    >
+                    <label class="field__label-txt" for="first-name">
+                      First Name
+                    </label>
+                    <img
+                      class="field__icon"
+                      src="img/first-name_icon.svg"
+                      alt="first name"
+                    >
+                    <p class="field__error">
+                      The name must be more than 2 characters
+                    </p>
+                  </div>
+                  <div class="registration__form-item field" data-scroll>
+                    <input
+                      class="field__input"
+                      type="text"
+                      name="second-name"
+                      id="second-name"
+                      placeholder=" "
+                    >
+                    <label class="field__label-txt" for="second-name">
+                      Second Name
+                    </label>
+                    <img
+                      class="field__icon"
+                      src="img/second-name_icon.svg"
+                      alt="second name"
+                    >
+                    <p class="field__error">
+                      The name must be more than 2 characters
+                    </p>
+                  </div>
+                  <div class="registration__form-item field" data-scroll>
+                    <input
+                      class="field__input"
+                      type="text"
+                      name="country"
+                      id="country"
+                      placeholder=" "
+                      style="position: relative;"
+                      autocomplete="false"
+                    >
+                    <label class="field__label-txt" for="country">
+                      Country
+                    </label>
+                    <img
+                      class="field__icon"
+                      src="img/country_icon.svg"
+                      alt="country"
+                    >
+                    <img
+                      class="field__icon field__icon--arrow"
+                      src="img/arrow_icon.svg"
+                      alt="arrow"
+                    >
+                    <p class="field__error">
+                      Fill in the field
+                    </p>
+                  </div>
+                  <div class="registration__form-item field" data-scroll>
+                    <input
+                      class="field__input"
+                      type="text"
+                      name="phone"
+                      id="phone"
+                      placeholder=" "
+                    >
+                    <label class="field__label-txt" for="phone">
+                      Phone
+                    </label>
+                    <img
+                      class="field__icon"
+                      src="img/phone_icon.svg"
+                      alt="phone"
+                    >
+                    <p class="field__error">
+                      Fill in the field
+                    </p>
+                  </div>
+                  <div class="registration__form-item field" data-scroll>
+                    <input
+                      class="field__input"
+                      type="password"
+                      name="password"
+                      id="password"
+                      placeholder=" "
+                    >
+                    <label class="field__label-txt" for="password">
+                      Password
+                    </label>
+                    <img
+                      class="field__icon"
+                      src="img/password_icon.svg"
+                      alt="password"
+                    >
+                    <p class="field__error">
+                      Password must have 1 letter, 1 number and 1 symbol
+                    </p>
+                  </div>
+                  <div class="registration__form-item field" data-scroll>
+                    <input
+                      class="field__input"
+                      type="password"
+                      name="confirm-password"
+                      id="confirm-password"
+                      placeholder=" "
+                    >
+                    <label class="field__label-txt" for="confirm-password">
+                      Confirm password
+                    </label>
+                    <img
+                      class="field__icon"
+                      src="img/confirm-password_icon.svg"
+                      alt="confirm password"
+                    >
+                    <p class="field__error">
+                      Password does not match
+                    </p>
+                  </div>
+                  <div class="registration__form-item field" data-scroll>
+                    <input
+                      class="field__input"
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder=" "
+                      formnovalidate
+                    >
+                    <label class="field__label-txt" for="email">
+                      Email
+                    </label>
+                    <img
+                      class="field__icon"
+                      src="img/email_icon.svg"
+                      alt="email"
+                    >
+                    <p class="field__error">
+                      Email is not correct
+                    </p>
+                  </div>
+                  <div class="registration__form-item registration__form-item--agree field" data-scroll>
+                    <input
+                      class="field__checkbox"
+                      type="checkbox"
+                      name="agree"
+                      id="agree"
+                    >
+                    <label class="field__label-chk" for="agree">
+                      I agree to the <a href="#!" data-modal-target="#terms">Terms & Conditions</a>
+                      <img
+                        class="field__icon-chk"
+                        src="img/check_icon.svg"
+                        alt="email"
+                      >
+                    </label>
+                  </div>
+                  <div class="registration__form-item">
+                    <button class="btn" type="submit" formnovalidate>
+                      Sign Up
+                    </button>
+                  </div>
+                  <div class="countries">
+                    <ul class="countries__list"></ul>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="registration__footer">
+          If you have an account, <a href="#!">Log In</a>
+        </p>
+      </section>
+    </main>
+
+    <div class="modal" id="terms">
+      <div class="modal__header">
+        <div class="modal__title">Terms & Conditions</div>
+        <button class="modal__close" type="button" data-close-button>&times;</button>
+      </div>
+      <div class="modal__body">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam facere voluptatum odit quas non veritatis nisi sit labore ut laudantium earum, dignissimos vero enim. Iste, ab. Voluptatem sunt error aliquid consequuntur. Debitis impedit adipisci rem deleniti numquam commodi, autem est labore voluptatibus maiores veniam tempore, accusamus nesciunt earum provident assumenda quisquam dignissimos odit tempora sint blanditiis, itaque consequatur molestias omnis? Fugiat ipsum et sint, doloribus id saepe laudantium nihil commodi blanditiis quam illo, perferendis quod voluptatum libero repudiandae nesciunt? Vel fuga itaque blanditiis sequi nobis voluptates ab reprehenderit ex. Natus vero tempore recusandae reiciendis nisi dignissimos eos omnis placeat maiores, molestiae non eius itaque vel ullam quisquam aspernatur facilis sequi eaque laboriosam porro officiis sit fuga. Molestiae, facilis reiciendis esse explicabo eos fugit minima accusantium, quidem, eaque suscipit sequi.
+      </div>
+    </div>
+
+    <div id="overlay"></div>
+
+    <script type="text/javascript" src="js/libs/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/libs/scroll-out.min.js"></script>
+    <script type="text/javascript" src="js/main.min.js"></script>
+  </body>
+</html>
