@@ -1,7 +1,7 @@
 # BestRest registration form
 ### Layouts and files
-[Макет Figma](https://www.figma.com/file/SddO8xg3iJXldldSNZL080/Untitled?node-id=0%3A1)
-[Ссылка на материалы (Иконки, шрифты, бэкграунды):](https://drive.google.com/file/d/1zTxlLoC3OSa57E_JycBJ9fcj_Fs6huUK/view?usp=sharing)
+- [Макет Figma](https://www.figma.com/file/SddO8xg3iJXldldSNZL080/Untitled?node-id=0%3A1)
+- [Ссылка на материалы (Иконки, шрифты, бэкграунды)](https://drive.google.com/file/d/1zTxlLoC3OSa57E_JycBJ9fcj_Fs6huUK/view?usp=sharing)
 
 ### Task description - Создание формы регистрации на сайте.
 Общие требования:
