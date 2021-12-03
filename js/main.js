@@ -65,7 +65,6 @@ function countryToPhone(data) {
   countryInput.addEventListener("keyup", filterCountriesList);
 
   countriesList.addEventListener("click", (event) => {
-    console.log("foo");
     countryInput.value = event.target.textContent;
   });
 
@@ -157,9 +156,8 @@ registrationForm.addEventListener("submit", (event) => {
     isAllValid = false;
     setErrorStyle(emailInput);
   }
-console.log(agreeCheckbox.checked);
-  if (!agreeCheckbox.checked) {
 
+  if (!agreeCheckbox.checked) {
     isAllValid = false;
     setErrorStyle(agreeCheckbox);
   }
