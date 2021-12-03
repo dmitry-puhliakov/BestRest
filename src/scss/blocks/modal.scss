@@ -1,0 +1,51 @@
+.modal {
+  position: fixed;
+  width: 500px;
+  max-height: 90%;
+  max-width: 80%;
+  top: 50%;
+  left: 50%;
+  background-color: $c-main;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  border-radius: 5px;
+  transform: translate(-50%, -50%) scale(0);
+  @extend %transition;
+  overflow-y: auto;
+  z-index: 10;
+
+  &.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &__header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $c-secondary;
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 500;
+    color: $c-secondary;
+  }
+
+  &__body {
+    padding: 20px;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 2.2rem;
+    color: $c-secondary;
+  }
+
+  &__close {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: $c-secondary;
+    cursor: pointer;
+  }
+}

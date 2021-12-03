@@ -1,0 +1,45 @@
+.btn {
+  display: block;
+  width: 100%;
+  padding: 15px 0 16px;
+  background-color: $c-brand;
+  border: 1px solid $c-brand;
+  border-radius: 5px;
+
+  font-size: 1.9rem;
+  line-height: 2.3rem;
+  text-align: center;
+  text-decoration: none;
+  color: $c-secondary;
+  cursor: pointer;
+  @extend %transition;
+
+  @include onDesktop {
+    width: fit-content;
+    padding: 15px 49px 16px;
+  }
+
+  &:hover {
+    background-color: transparent;
+    color: $c-brand;
+  }
+
+  &--negative {
+    padding: 14px 0 13px;
+    background-color: transparent;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: $c-brand;
+
+    @include onDesktop {
+      padding: 15px 49px 16px;
+      font-size: 1.9rem;
+      line-height: 2.3rem;
+    }
+
+    &:hover {
+      background-color: $c-brand;
+      color: $c-secondary;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.greeting {
+  background:
+    url(../img/section_1-svg_1.svg) fixed no-repeat -24px 13px/86px 122px,
+    url(../img/section_1-svg_2.svg) fixed no-repeat 112.4% 32%/99px 78px,
+    url(../img/section_1-svg_3.svg) fixed no-repeat -15px 92.7%/93px 93px,
+    url(../img/bg-1-small.jpg) fixed no-repeat top/cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 15px 0;
+
+  @include onDesktop {
+    background:
+      url(../img/section_1-svg_1.svg) fixed no-repeat 80.25% -46px,
+      url(../img/section_1-svg_2.svg) fixed no-repeat -52px 35.45%,
+      url(../img/section_1-svg_3.svg) fixed no-repeat 103.35% 93.75%,
+      url(../img/bg-1.jpg) fixed no-repeat top/cover;
+    padding: 15px;
+  }
+
+  &__logo {
+    display: block;
+    width: 120px;
+    height: 30px;
+    margin-bottom: 20px;
+
+    @include onDesktop {
+      width: 190px;
+      height: 48px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 3.6rem;
+    text-align: center;
+
+    @include onDesktop {
+      margin-bottom: 40px;
+      font-size: 6.2rem;
+      line-height: 7.3rem;
+    }
+
+    &--brand-color {
+      color: $c-brand;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+
+    @include onDesktop {
+      width: unset;
+    }
+  }
+}

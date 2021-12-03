@@ -1,0 +1,179 @@
+.field {
+  position: relative;
+
+  &__input {
+    position: relative;
+    width: 100%;
+    height: 56px;
+    margin-bottom: 6px;
+    padding-left: 50px;
+    padding-right: 16px;
+    padding-top: 12px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid $c-main;
+    border-radius: 5px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    outline: none;
+    color: $c-inp;
+    @extend %transition;
+    z-index: 2;
+
+    &:focus, &:hover {
+      border: 1px solid $c-brand;
+    }
+  }
+
+  &__label-txt {
+    display: block;
+    position: absolute;
+    top: 17px;
+    left: 50px;
+    width: 155px;
+    font-weight: 300;
+    font-size: 1.9rem;
+    line-height: 2.3rem;
+    color: $c-inp;
+    @extend %transition;
+    z-index: 3;
+  }
+
+  &__icon {
+    display: block;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 24px;
+    height: 24px;
+    z-index: 1;
+
+    &--arrow {
+      left: unset;
+      right: 16px;
+      @extend %transition;
+    }
+  }
+
+  &__input:focus + &__label-txt,
+  &__input:not(:placeholder-shown) + &__label-txt {
+    transform: translate(-3.2rem, -1.1rem) scale(0.58);
+    color: $c-brand;
+  }
+
+  &__input:focus ~ &__icon--arrow {
+    transform: rotate(180deg);
+  }
+
+  &__error {
+    font-size: 10px;
+    line-height: 12px;
+    text-align: right;
+    color: $c-err;
+    opacity: 0;
+    @extend %transition;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__label-chk{
+    display: block;
+    position: relative;
+
+    padding-left: 32px;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    color: $c-inp;
+
+    @include onDesktop {
+      margin: 19px 0;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -1px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $c-brand;
+      box-sizing: border-box;
+      box-shadow: 0px 28px 25px -25px rgba(0, 0, 0, 0.25);
+      border-radius: 3px;
+      @extend %transition;
+    }
+
+    &:hover::before {
+      background-color: $c-brand;
+    }
+
+    a {
+      position: relative;
+      color: $c-brand;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -3px;
+        height: 1px;
+        background-color: $c-brand;
+        @extend %transition;
+      }
+
+      &:hover::after {
+        background-color: $c-main;
+      }
+    }
+  }
+
+  &__icon-chk {
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+    @extend %transition;
+  }
+
+  &__checkbox:checked + &__label-chk &__icon-chk {
+    opacity: 1;
+  }
+
+  &__checkbox:checked + &__label-chk::before {
+    background-color: $c-brand;
+  }
+
+  &--err {
+    .field__error {
+      opacity: 1;
+    }
+
+    .field__label-chk::before {
+      border: 1px solid $c-err;
+      background-color: $c-err;
+    }
+  }
+}
+
+[data-scroll] {
+  transition: all 0.3s ease-in-out;
+
+  @for $i from 2 to 9 {
+    &:nth-child(#{$i}) {
+      transition-delay: $i * 0.2s;
+    }
+  }
+}
+
+[data-scroll="in"] {
+  transform: translateY(0) scale(1);
+}
+[data-scroll="out"] {
+  transform: translateY(500%) scale(0);
+}

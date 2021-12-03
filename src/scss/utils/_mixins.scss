@@ -7,3 +7,9 @@
     font-style: #{$style};
   }
 }
+
+@mixin onDesktop {
+  @media (min-width: 576px) {
+    @content;
+  }
+}

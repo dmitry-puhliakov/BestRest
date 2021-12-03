@@ -1,7 +1,20 @@
-h1 {
-  @extend %h1;
+html {
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  color: $c-main;
 }
 
-p {
-  font-size: 1.6rem;
+input {
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1.9rem;
+  line-height: 2.3rem;
+}
+
+button {
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
 }

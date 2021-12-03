@@ -1,0 +1,107 @@
+.registration {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 7px 0;
+
+  background:
+    url(../img/section_2-svg_1.svg) fixed no-repeat -17.2px 15.2%/60px 84px,
+    url(../img/section_2-svg_2.svg) fixed no-repeat 113% 4px/114px 91px,
+    url(../img/section_2-svg_3.svg) fixed no-repeat 111% 102.5%/107px 107px,
+    url(../img/bg-2-small.jpg) fixed no-repeat top/cover;
+
+
+
+  @include onDesktop {
+    background:
+      url(../img/section_2-svg_1.svg) fixed no-repeat -30px 54.45%,
+      url(../img/section_2-svg_2.svg) fixed no-repeat 105.35% 18.85%,
+      url(../img/section_2-svg_3.svg) fixed no-repeat 74% 104.25%,
+      url(../img/bg-2.jpg) fixed no-repeat top/cover;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - 136px);
+    padding-top: 90px;
+
+    @include onDesktop {
+      min-height: calc(100vh - 88px);
+      padding-top: 80px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 1.9rem;
+    line-height: 2.252rem;
+    text-align: center;
+
+    @include onDesktop {
+      margin-bottom: 55px;
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+    }
+
+    &--brand-color {
+      color: $c-brand;
+    }
+  }
+
+  &__form {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+
+    @include onDesktop {
+      margin: 0 -8px;
+    }
+  }
+
+  &__form-item {
+    width: 100%;
+    margin-bottom: 12px;
+
+    @include onDesktop {
+      width: calc(50% - 30px);
+      margin: 0 15px 12px;
+    }
+
+    &--agree {
+      margin: 11px 0 52px;
+    }
+  }
+
+  &__footer {
+    margin: 48px 0 60px;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    text-align: center;
+    color: $c-inp;
+
+    @include onDesktop {
+      margin: 30px 0;
+    }
+
+    a {
+      position: relative;
+      color: $c-brand;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -3px;
+        height: 1px;
+        background-color: $c-brand;
+        @extend %transition;
+      }
+
+      &:hover::after {
+        background-color: $c-main;
+      }
+    }
+  }
+}
